@@ -14,3 +14,7 @@
 .card-image{
     width: 170.5px;
 }
+
+.banner{
+    background-image: linear-gradient(#063053b3, #063053b3), url('../public/universityBackground.af009eb84471c0cfafad.png');
+}

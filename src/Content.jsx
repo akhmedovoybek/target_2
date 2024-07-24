@@ -19,17 +19,17 @@ function Content() {
       </div>
       <h2 className="text-center text-7xl font-bold mb-8 mt-20">Xizmatlar</h2>
       <div className="flex flex-col gap-y-6">
-        <figure class="flex bg-slate-100 rounded-xl p-8 md:p-0 dark:bg-slate-800 shadow-2xl">
+        <figure className="flex bg-slate-100 rounded-xl p-8 md:p-0 dark:bg-slate-800 shadow-2xl">
             <img src="/Blair-Hall-campus-Princeton-University-NJ.png" alt="" className="h-60 rounded-l-xl" />
-          <div class="pt-6 md:p-8 text-center md:text-left space-y-4">
+          <div className="pt-6 md:p-8 text-center md:text-left space-y-4">
             <h3 className="font-semibold text-gray-800 text-5xl">Xalqaro Universitetlar</h3>
             <p className="text-gray-800 text-3xl">Xalqaro universitetlar va ularning talablari haqida ma'lumotlar.</p>
             <Link to="/universities" className="p-7 bg-gray-900 hover:bg-gray-700 transition-all duration-300 text-2xl text-slate-100 rounded-xl block w-fit py-4">Ko'rish</Link>
           </div>
         </figure>
-        <figure class="flex bg-slate-100 rounded-xl p-8 md:p-0 dark:bg-slate-800 shadow-2xl">
+        <figure className="flex bg-slate-100 rounded-xl p-8 md:p-0 dark:bg-slate-800 shadow-2xl">
             <img src="/College-Map.jpeg" alt="" className="h-60 rounded-l-xl object-cover card-image" />
-          <div class="pt-6 md:p-8 text-center md:text-left space-y-4">
+          <div className="pt-6 md:p-8 text-center md:text-left space-y-4">
             <h3 className="font-semibold text-gray-800 text-5xl">Aqlli Filtr</h3>
             <p className="text-gray-800 text-3xl">Aqlli Filtr sizga orzuingizdagi universitetni topishda ko'maklashadi.</p>
             <Link to="/filter" className="p-7 bg-gray-900 hover:bg-gray-700 transition-all duration-300 text-2xl text-slate-100 rounded-xl block w-fit py-4">Ko'rish</Link>

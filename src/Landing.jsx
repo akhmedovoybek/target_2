@@ -10,7 +10,7 @@ function Landing() {
         <h4 className="text-2xl text-slate-100 tracking-widest">
           Find Your Best-Fit University
         </h4>
-        <button class="bg-slate-50 text-gray-900 hover:bg-gray-800 hover:text-slate-100 font-bold text-3xl py-3 px-16 mt-10 rounded-2xl transition-all duration-500">OLDINGA➡</button>
+        <button className="bg-slate-50 text-gray-900 hover:bg-gray-800 hover:text-slate-100 font-bold text-3xl py-3 px-16 mt-10 rounded-2xl transition-all duration-500">OLDINGA➡</button>
         
 
       </div>
