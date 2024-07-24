@@ -4,20 +4,22 @@ let data = [
             sat: 1540,
             ielts: 7,
             acc: 3,
-            tuition: 57986,
+            tuition: "57,986",
             location: "Massachusetts, USA",
-            ranking: 1,
-            gpa: 3.5
+            ranking: 3,
+            gpa: 3.5,
+            img: "/mit.png"
         },
         {
-            name: "Harvard",
-            sat: 1540,
+            name: "Harvard University",
+            sat: 1520,
             ielts: 7,
-            acc: 3,
-            tuition: 57986,
-            location: "Massachusetts, USA",
-            ranking: 1,
-            gpa: 3.5
+            acc: 3.2,
+            tuition: "55,473",
+            location: "California, USA",
+            ranking: 4,
+            gpa: 3.72,
+            img: "/harvard.png"
         }
 ]
 

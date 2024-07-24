@@ -5,7 +5,7 @@ function Universities(props) {
   let info = props.data;
 
   let cards = info.map((p) => {
-    return <Card name={p.name} />;
+    return <Card name={p.name} img = {p.img} sat={p.sat} ielts={p.ielts} acc={p.acc} tuition={p.tuition} gpa={p.gpa} ranking={p.ranking} location={p.location} />;
   });
 
   return (
@@ -24,7 +24,7 @@ function Universities(props) {
           <div className="flex justify-center mt-7">
             <input type="text" className="" />
           </div>
-          <div className="flex flex-wrap justify-between items-center gap-y-7">
+          <div className="flex flex-wrap justify-between gap-y-7">
             {cards}
           </div>
         </div>
