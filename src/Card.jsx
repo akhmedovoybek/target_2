@@ -1,14 +1,10 @@
 import React from "react";
 
 function Card(props) {
-  const cardClick = ()=>{
-    props.showDescription(props.description, props.name);
-  }
+  
   return (
-    <div className="">
       <div
         className="shadow-2xl bg-gray-200 rounded-xl max-w-80 w-80"
-        onClick={cardClick}
       >
         <div className="p-7">
           <img src={props.img} alt="" className="h-20" />
@@ -31,15 +27,13 @@ function Card(props) {
             IELTS: <b>{props.ielts}+</b>
           </p>
           <p className="text-xl text-gray-800 mt-2">
-            Acceptance Rate: <b>{props.ranking}%</b>
+            Acceptance Rate: <b>{props.acc}%</b>
           </p>
           <p className="text-xl text-gray-800 mt-2">
             GPA: <b>{props.gpa}+</b>
           </p>
         </div>
       </div>
-      
-    </div>
   );
 }
 

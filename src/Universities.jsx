@@ -91,14 +91,7 @@ function Universities(props) {
             </div>
           </div>
           <div className="flex flex-wrap justify-between gap-y-7">{cards}</div>
-          <div
-            className="z-10 w-3/4 h-60 bg-slate-800 text-slate-200 absolute my-0 mx-auto"
-            style={{ opacity: opacity }}
-            ref={modal}
-          >
-            <h3 className="font-semibold text-3xl">{name}</h3>
-            <p className="text-2xl">{description}</p>
-          </div>
+          
         </div>
       </div>
     </div>
