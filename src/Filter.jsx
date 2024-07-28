@@ -138,7 +138,52 @@ function Filter(props) {
           </div>
           <div className="flex flex-wrap justify-between gap-y-7">{cards}</div>
           <hr className="my-6" />
+          <div className="flex gap-x-8">
           {dreamCardFinal}
+          <div className="shadow-2xl bg-white rounded-xl w-auto card p-9">
+            <h3 className="font-semibold text-4xl text-center mb-5">O'quv Markazlari</h3>
+            <div className="flex gap-x-4 mb-14">
+              <div className="flex flex-col">
+                <h3 className="">Name: <b>SATashkent</b></h3>
+                <p className="">SATashkent <br />91 787 65 75 <br /> https://g.co/kgs/18A33Ri</p>
+                <p className="">Length: 3 oy</p>
+                <p className="">Price: 1.6 mln</p>
+              </div>
+              <div className="flex flex-col">
+                <h3 className="">Name: <b>Sat by Ma'rifat Jama</b></h3>
+                <p className="">SAT by Ma'rifat Jamal <br />78 113 39 99 <br /> https://g.co/kgs/hDi3Dmp</p>
+                <p className="">Length: 3 oy</p>
+                <p className="">Price : 1.5 mln</p>
+              </div>
+              <div className="flex flex-col">
+                <h3 className="">Name : <b>Prime Coach English School</b></h3>
+                <p className="">Prime Coach English School <br />94 606 43 54 <br />https://www.instagram.com/primecoach.uz/</p>
+                <p className="">Length: 3 oy</p>
+                <p className="">Price : 1.7 mln</p>
+              </div>
+            </div>
+            <div className="flex gap-x-4">
+              <div className="flex flex-col">
+                <h3 className="">Name : <b>IELTS ZONE</b></h3>
+                <p className="">IELTS ZONE LC - Integro A<br />55 511 09 09<br /> https://ieltszone.uz</p>
+                <p className="">Length: 3 oy</p>
+                <p className="">Price: 850 000</p>
+              </div>
+              <div className="flex flex-col">
+                <h3 className="">Name: <b>Diyorbek's IELTS</b></h3>
+                <p className="">Diyorbek's IELTS LC <br />77 030 88 28 <br /> https://www.instagram.com/diyorbeksielts/</p>
+                <p className="">Length: 3 oy</p>
+                <p className="">Price : 800 000</p>
+              </div>
+              <div className="flex flex-col">
+                <h3 className="">Name : <b>IELTS IDP</b></h3>
+                <p className="">IELTS IDP <br />71 230 01 03 <br />https://g.co/kgs/esb55vE</p>
+                <p className="">Length: 3 oy</p>
+                <p className="">Price : 900 000</p>
+              </div>
+            </div>
+          </div>
+          </div>
         </div>
       </div>
     </div>

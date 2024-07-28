@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -47,10 +48,10 @@ function Header() {
     
         <div className="hidden sm:block sm:ml-6">
           <div className="flex">
-            <a href="#" className="px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:bg-gray-100">Home</a>
-            <a href="#" className="ml-4 px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:bg-gray-100">About</a>
-            <a href="#" className="ml-4 px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:bg-gray-100">Services</a>
-            <a href="#" className="ml-4 px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:bg-gray-100">Contact</a>
+            <Link to="/" className="px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:bg-gray-100">Home</Link>
+            <Link to="/universities" className="ml-4 px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:bg-gray-100">Universitetlar</Link>
+            <Link to="/filter" className="ml-4 px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:bg-gray-100">Aqlli Filtr</Link>
+            <Link to="/programs" className="ml-4 px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:bg-gray-100">Dasturlar</Link>
           </div>
         </div>
       </div>

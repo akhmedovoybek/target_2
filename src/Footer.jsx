@@ -7,14 +7,14 @@ const Footer = () => {
     <footer className="bg-gray-900 text-white py-14">
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-60">
         <div className="mb-4 md:mb-0">
-          <p>&copy; 2024 Your Website. All rights reserved.</p>
-          <p>123 Example Street, City, Country</p>
-          <p>Email: info@example.com</p>
+          <p>&copy; 2024 FindUni. All rights reserved.</p>
+          <p>Email: akhmedovoybek2555@gmail.com</p>
         </div>
         <div className="mb-4 md:mb-0 flex-col flex">
-          <Link to='/' className='hover:underline'>About</Link>
-          <Link to='universities' className='hover:underline'>Services</Link>
-          <Link to='/' className='hover:underline'>Contact</Link>
+          <Link to='/' className='hover:underline'>Home</Link>
+          <Link to='/universities' className='hover:underline'>Universitetlar</Link>
+          <Link to='/filter' className='hover:underline'>Aqlli Filtr</Link>
+          <Link to='/programs' className='hover:underline'>Dasturlar</Link>
         </div>
         <div className="flex items-center">
           <a href="#" className="text-gray-300 hover:text-white mx-2">

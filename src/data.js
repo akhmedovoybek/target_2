@@ -469,18 +469,6 @@ let data = [
     "description": "The Technical University of Munich (TUM), founded in 1868, is a leading public research university in Munich, Germany. Known for its emphasis on engineering and technology, TUM is recognized for its strong research programs and innovative approach to education."
 },
 {
-    "name": "Australian National University",
-    "sat": 1350,
-    "ielts": 6.5,
-    "acc": 20,
-    "tuition": "50000",
-    "location": "Canberra, Australia",
-    "ranking": 30,
-    "gpa": 3.6,
-    "img": "/anu.png",
-    "description": "Australian National University (ANU), founded in 1946, is a public research university located in Canberra, Australia. It is known for its strong research focus and high academic standards, offering a diverse range of programs and a vibrant campus community."
-},
-{
     "name": "The University of Tokyo",
     "sat": 1400,
     "ielts": 6.5,
@@ -499,7 +487,7 @@ let data = [
     "acc": 3,
     "tuition": "63000",
     "location": "New York City, New York, USA",
-    "ranking": 2,
+    "ranking": 34,
     "gpa": 3.9,
     "img": "/columbia.png",
     "description": "Columbia University, founded in 1754, is an Ivy League private university located in New York City. Known for its rigorous academic programs and strong research focus, Columbia offers a prestigious and intellectually stimulating environment."
