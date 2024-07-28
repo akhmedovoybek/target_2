@@ -6,6 +6,7 @@ import "./Search.css";
 // Force update hook
 function useForceUpdate() {
   const [, forceUpdate] = useReducer((x) => x + 1, 0);
+
   return forceUpdate;
 }
 
@@ -17,24 +18,18 @@ let dream = "";
 let searchQuery = "";
 
 function Filter(props) {
-  let modal = React.createRef();
-  const [opacity, setOpacity] = React.useState(0);
-  let description = "";
-  let name = "";
   const forceUpdate = useForceUpdate();
   let ieltsScore = useRef();
   let satScore = useRef();
   let gpaScore = useRef();
-  let dreamUni = useRef();
-
+  const [selectedValue, setSelectedValue] = useState("");
+  const info = props.data;
   const onInputChange = () => {
     ielts = ieltsScore.current.value;
     sat = satScore.current.value;
     gpa = gpaScore.current.value;
-    dream = dreamUni.current.value;
     forceUpdate();
   };
-  const info = props.data;
   const names = info.map((p) => p.name);
 
   const filteredInfo = info.filter(
@@ -59,28 +54,31 @@ function Filter(props) {
 
   const [query, setQuery] = useState("");
   const [filteredData, setFilteredData] = useState(names);
+    const dreamCard = info.filter(
+      (p) => p.name==selectedValue
+    )
 
-  const handleSearch = (event) => {
-    const value = event.target.value;
-    setQuery(value);
-    const filtered = names.filter((item) =>
-      item.toLowerCase().includes(value.toLowerCase())
-    );
-    setFilteredData(filtered);
-  };
-
-  const handleItemClick = (item) => {
-    setQuery(item);
-    setFilteredData([item]);
-  };
-  const dreamCard = info.filter((p) => p.name == dream);
-
+    const dreamCardFinal = dreamCard.map((p)=>(
+      <Card
+      key={p.name}
+      name={p.name}
+      img={p.img}
+      sat={sat<p.sat ? <p className="text-red-800">{sat}❌ <span className="text-green-700">{p.sat}✅</span></p> : <p className="text-green-700"><span className="text-green-700">{sat}✅</span></p>}
+      ielts={ielts<p.ielts ? <p className="text-red-800">{ielts}❌ <span className="text-green-700">{p.ielts}✅</span></p> : <p className="text-green-700"><span className="text-green-700">{ielts}✅</span></p>}
+      acc={p.acc}
+      tuition={p.tuition}
+      gpa={gpa<p.gpa ? <p className="text-red-800">{gpa}❌ <span className="text-green-700">{p.gpa}✅</span></p> : <p className="text-green-700"><span className="text-green-700">{gpa}✅</span></p>}
+      ranking={p.ranking}
+      location={p.location}
+      description={p.description}
+    />
+    ))
   return (
     <div>
       <div className="wrapper">
         <div className="banner h-56 w-full bg-no-repeat bg-cover flex flex-col items-center justify-center">
           <h2 className="text-slate-50 text-7xl font-bold">
-            Xalqaro Universitetlar
+            Aqlli Filtr
           </h2>
         </div>
         <div className="py-12 px-44">
@@ -128,48 +126,7 @@ function Filter(props) {
                 </div>
               </div>
             </div>
-            <div className="relative">
-              <div className="rounded-2xl shadow-2xl bg-slate-300 p-8 flex flex-col justify-center items-center gap-y-2">
-                <h3 className="text-slate-900 font-semibold text-3xl">
-                  Dream Uni
-                </h3>
-                <div>
-                  <div className="relative">
-                    <input
-                      ref={dreamUni}
-                      value={query}
-                      type="text"
-                      className="w-96 pl-10 pr-4 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-                      placeholder="Search..."
-                      onChange={handleSearch}
-                    />
-                    <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                      <svg
-                        className="w-5 h-5 text-gray-400"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0 1 14 0z"
-                        ></path>
-                      </svg>
-                    </div>
-                  </div>
-                  <ul className="scrollable-list">
-                    {filteredData.map((item, index) => (
-                      <li key={index} onClick={() => handleItemClick(item)}>
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
+            <Search data={names} setSelectedValue={setSelectedValue} />
           </div>
           <div className="flex justify-center mb-8">
             <button
@@ -180,20 +137,8 @@ function Filter(props) {
             </button>
           </div>
           <div className="flex flex-wrap justify-between gap-y-7">{cards}</div>
-          <hr className="" />
-          <Card
-            key={dreamCard.name}
-            name={dreamCard.name}
-            img={dreamCard.img}
-            sat={dreamCard.sat}
-            ielts={dreamCard.ielts}
-            acc={dreamCard.acc}
-            tuition={dreamCard.tuition}
-            gpa={dreamCard.gpa}
-            ranking={dreamCard.ranking}
-            location={dreamCard.location}
-            description={dreamCard.description}
-          />
+          <hr className="my-6" />
+          {dreamCardFinal}
         </div>
       </div>
     </div>

@@ -4,7 +4,7 @@ function Card(props) {
   
   return (
       <div
-        className="shadow-2xl bg-gray-200 rounded-xl max-w-80 w-80"
+        className="shadow-xl bg-gray-200 rounded-xl max-w-80 w-80"
       >
         <div className="p-7">
           <img src={props.img} alt="" className="h-20" />
